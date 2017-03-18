@@ -16,14 +16,14 @@
         options
         {"sentences-spout" :shuffle}
         ;; bolt configuration 1
-        "bolts.parse.ParseTweet")
-            ...
+        "bolts.parse.ParseTweet"
+        ["sentences","count"])
         ;; bolt configuration 2
         (python-bolt-spec
           options
           {"sentences-spout" :shuffle}
-        "bolts.tweetcounter.TweetCounter")
-            ...
+        "bolts.tweetcounter.TweetCounter"
+        ["sentences","count"])
     }
   ]
 )
