@@ -17,7 +17,7 @@
         {"sentences-spout" :shuffle}
         ;; bolt configuration 1
         "bolts.parse.ParseTweet"
-        ["words"]
+        ["valid_words"]
         :p 2)
         ;; bolt configuration 2
     }
