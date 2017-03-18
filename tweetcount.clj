@@ -14,7 +14,7 @@
     ;; Bolts
     {"parse-bolt" (python-bolt-spec
         options
-        {"sentences-spout" :all}
+        {"sentences-spout" :shuffle}
         ;; bolt configuration 1
         "bolts.parse.ParseTweet"
         ["words"]
