@@ -8,13 +8,13 @@
     {"sentences-spout" (python-spout-spec
         options
         "spouts.sentences.Sentences"
-        ["sentences"]
+        ["sentence"]
         )
     }
     ;; Bolts
-    {"count-bolt" (python-bolt-spec
+    {"parse-bolt" (python-bolt-spec
         options
-        {"sentences-spout" :shuffle}
+        {"sentence-spout" :shuffle}
         ;; bolt configuration 1
         "bolts.parse.ParseTweet"
         ["words"])
@@ -24,7 +24,7 @@
           options
           {"words-spout" :shuffle}
         "bolts.tweetcounter.TweetCounter"
-        ["words","count"])
+        ["word","count"])
     }
   ]
 )
