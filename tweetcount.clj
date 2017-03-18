@@ -19,13 +19,11 @@
         "bolts.parse.ParseTweet"
         ["valid_words"]
         :p 2)
-        ;; bolt configuration 2
-
     "count-bolt" (python-bolt-spec
           options
           {"parse-blot" :all}
         "bolts.tweetcounter.TweetCounter"
-        ["word","count"])
+        ["word" "count"])
     }
   ]
 )
