@@ -17,7 +17,8 @@
         {"sentences-spout" :all}
         ;; bolt configuration 1
         "bolts.parse.ParseTweet"
-        ["words"])
+        ["words"]
+        :p 2)
         ;; bolt configuration 2
     }
     {"count-bolt" (python-bolt-spec
