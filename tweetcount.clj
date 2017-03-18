@@ -20,8 +20,8 @@
         ["valid_words"]
         :p 2)
         ;; bolt configuration 2
-    }
-    {"count-bolt" (python-bolt-spec
+
+    "count-bolt" (python-bolt-spec
           options
           {"parse-blot" :all}
         "bolts.tweetcounter.TweetCounter"
