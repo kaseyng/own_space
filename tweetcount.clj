@@ -14,7 +14,7 @@
     ;; Bolts
     {"parse-bolt" (python-bolt-spec
         options
-        {"sentences-spout" :shuffle}
+        {"sentences-spout" :all}
         ;; bolt configuration 1
         "bolts.parse.ParseTweet"
         ["words"])
@@ -22,7 +22,7 @@
     }
     {"count-bolt" (python-bolt-spec
           options
-          {"parse-blot" :shuffle}
+          {"parse-blot" :all}
         "bolts.tweetcounter.TweetCounter"
         ["word","count"])
     }
