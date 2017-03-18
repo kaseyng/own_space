@@ -17,7 +17,7 @@
         {"sentences-spout" :shuffle}
         ;; bolt configuration 1
         "bolts.parse.ParseTweet"
-        ["valid_words"]
+        ["word"]
         :p 2)
     "count-bolt" (python-bolt-spec
           options
